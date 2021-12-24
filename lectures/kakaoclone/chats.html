@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chats - Kakao Clone</title>
+  </head>
+
+  <body>
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <i class="fas fa-wifi"></i>
+      </div>
+
+      <div class="status-bar__column">18:43</div>
+      <div class="status-bar__column">
+        <span>100%</span>
+        <i class="fas fa-battery-full"></i><i class="fas fa-bolt"></i>
+      </div>
+    </div>
+
+    <header class="screen-header">
+      <h1 class="screen-header__title">Chats</h1>
+      <div class="screen-header__icons">
+        <span><i class="fas fa-search fa-lg"></i></span>
+        <span><i class="far fa-comment-dots fa-lg"></i></span>
+        <span><i class="fas fa-music fa-lg"></i></span>
+        <span
+          ><a href="settings.html"><i class="fas fa-cog fa-lg"></i></a
+        ></span>
+      </div>
+    </header>
+
+    <main class="main-screen chat-list">
+      <div class="user-component">
+        <div class="user-component__column">
+          <img
+            class="user-component__avatar"
+            src="https://t1.kakaocdn.net/kakaocorp/kakaocorp/admin/5f9c58c2017800001.png"
+          />
+          <div class="user-component__text">
+            <h4 class="user-component__title">Kakao Talk</h4>
+            <h6 class="user-component__subtitle">
+              Please check my Kakao Account info
+            </h6>
+          </div>
+        </div>
+        <div class="user-component__column">
+          <span class="user-component__time">13:55</span>
+          <div class="badge">1</div>
+        </div>
+      </div>
+
+      <a href="chat.html">
+        <div class="user-component">
+          <div class="user-component__column">
+            <img
+              class="user-component__avatar"
+              src="http://gdimg1.gmarket.co.kr/goods_image2/shop_moreimg/181/683/1816831497/1816831497_02.jpg?ver=1613880524"
+            />
+            <div class="user-component__text">
+              <h4 class="user-component__title">Winter Bear</h4>
+              <h6 class="user-component__subtitle">
+                Hey! Let's go to make a snowman!
+              </h6>
+            </div>
+          </div>
+          <div class="user-component__column">
+            <span class="user-component__time">14:15</span>
+            <div class="badge">1</div>
+          </div>
+        </div></a
+      >
+    </main>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__btn">
+          <a class="nav__link" href="friends.html">
+            <i class="far fa-user fa-2x"></i
+          ></a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="chats.html">
+            <span class="nav__notification badge">2</span
+            ><i class="fas fa-comment fa-2x"></i>
+          </a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="find.html"
+            ><i class="fas fa-search fa-2x"></i
+          ></a>
+        </li>
+        <li class="nav__btn">
+          <a class="nav__link" href="more.html"
+            ><i class="fas fa-ellipsis-h fa-2x"></i
+            ><span class="nav__dot"></span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="no-mobile">
+      <img src="https://pbs.twimg.com/media/E6nprhaVgAEd75z.jpg:small" />
+      <span>Your screen size is too big!</span>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/6d66577a7c.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

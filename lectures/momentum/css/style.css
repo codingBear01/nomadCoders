@@ -1,0 +1,108 @@
+@import "rest.css";
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.hidden {
+  display: none;
+}
+
+img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  animation: fadeIn 0.5s linear;
+}
+
+.timeAndForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#clock {
+  color: white;
+  font-size: 65px;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  border-top: 3px double white;
+  border-bottom: 3px double white;
+  padding: 20px 70px;
+  margin-top: 250px;
+}
+
+#login-form {
+  margin-bottom: 45px;
+}
+
+#login-form input,
+#todo-form input {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid white;
+  padding-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+#login-form ::placeholder,
+#todo-form ::placeholder {
+  color: white;
+  text-shadow: -0.5px 0 black, 0 0.5px black, 0.5px 0 black, 0 -0.5px black;
+  font-size: 18px;
+  text-align: center;
+}
+
+#login-form button {
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid white;
+  padding: 5px;
+  color: white;
+  margin-left: 10px;
+}
+
+#greeting {
+  color: white;
+}
+
+#todo-list {
+  color: white;
+}
+
+#todo-list span {
+  margin-right: 10px;
+  font-size: 25px;
+  border-bottom: 1px solid white;
+}
+
+#todo-list button {
+  background: none;
+  border: none;
+  font-size: 20px;
+}
+
+#quote {
+  color: white;
+  font-size: 20px;
+  padding-right: 10px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  text-align: right;
+  margin-top: 250px;
+}
+
+#quote span {
+  flex-direction: column;
+  display: block;
+}
+
+#weather {
+  text-align: right;
+  color: white;
+}

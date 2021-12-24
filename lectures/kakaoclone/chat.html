@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat w/ Winter Bear</title>
+  </head>
+
+  <body id="chat-screen">
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <i class="fas fa-wifi"></i>
+      </div>
+
+      <div class="status-bar__column">18:43</div>
+      <div class="status-bar__column">
+        <span>100%</span>
+        <i class="fas fa-battery-full"></i><i class="fas fa-bolt"></i>
+      </div>
+    </div>
+
+    <header class="alt-header">
+      <div class="alt-header__column">
+        <a href="chats.html"> <i class="fas fa-chevron-left fa-lg"></i></a>
+      </div>
+      <div class="alt-header__column">
+        <h1 class="alt-header__title">Winter Bear</h1>
+      </div>
+      <div class="alt-header__column">
+        <span><i class="fas fa-search fa-lg"></i></span>
+        <span><i class="fas fa-bars fa-lg"></i></span>
+      </div>
+    </header>
+
+    <main class="main-screen main-chat">
+      <div class="chat__timestamp">Monday, Dec. 6, 2021</div>
+
+      <div class="message-row">
+        <img
+          src="http://gdimg1.gmarket.co.kr/goods_image2/shop_moreimg/181/683/1816831497/1816831497_02.jpg?ver=1613880524"
+          alt=""
+        />
+        <div class="message-row__content">
+          <span class="messge__author">Winter Bear</span>
+          <div class="message__info">
+            <span class="message__bubble">Hi!</span>
+            <span class="message__time">8:57</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="message-row message-row--own">
+        <div class="message-row__content">
+          <div class="message__info">
+            <span class="message__bubble">Hey!</span>
+            <span class="message__time">9:11</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <form action="" class="reply">
+      <div class="reply__column">
+        <i class="far fa-plus-square fa-lg"></i>
+      </div>
+      <div class="reply__column">
+        <input type="text" placeholder="Write a message" />
+        <i class="far fa-smile-beam fa-lg"></i>
+        <button>
+          <i class="fas fa-arrow-up"></i>
+        </button>
+      </div>
+    </form>
+
+    <div id="no-mobile">
+      <img src="https://pbs.twimg.com/media/E6nprhaVgAEd75z.jpg:small" />
+      <span>Your screen size is too big!</span>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/6d66577a7c.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

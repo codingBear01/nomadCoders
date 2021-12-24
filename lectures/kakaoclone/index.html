@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to KakaoTalk</title>
+  </head>
+
+  <body>
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>No Service</span>
+        <i class="fas fa-wifi"></i>
+      </div>
+
+      <div class="status-bar__column">18:43</div>
+      <div class="status-bar__column">
+        <span>100%</span>
+        <i class="fas fa-battery-full"></i><i class="fas fa-bolt"></i>
+      </div>
+    </div>
+
+    <header class="welcome-header">
+      <h1 class="welcome-header__title">Welcome to KakaoTalk</h1>
+      <p class="welcome-header__text">
+        If you have a Kakao Account, log in with your email or phone number.
+      </p>
+    </header>
+
+    <form action="friends.html" class="login-form">
+      <input type="text" required placeholder="Email or phone number" />
+      <input type="password" required placeholder="Password" />
+      <input type="submit" value="Log In" />
+      <input type="submit" value="Sign Up" />
+      <a href="#">Find Kakao Account or Password</a>
+    </form>
+
+    <div id="no-mobile">
+      <img src="https://pbs.twimg.com/media/E6nprhaVgAEd75z.jpg:small" />
+      <span>Your screen size is too big!</span>
+    </div>
+
+    <script
+      src="https://kit.fontawesome.com/6d66577a7c.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

@@ -1,0 +1,325 @@
+학습기간: 21/11/29~21/12/06
+
+색깔 크기 둘레 위치 여백 기타
+
+1.코딩 기본사항 및 LEARNING HTML
+
+HTML 뼈
+CSS 근육
+JS 뇌
+
+HTML?
+- tag와 attribute으로 구성
+ex <tag attribute="~">content</tag>
+- tag를 전부 외우려 하지 말고 필요할 때마다 검색해서 적용하는 연습!
+유용한 확장프로그램
+prettier: 저장 시 잘못된 코드 자동 수정
+
+form attribute 
+lable 하고 input 입력 시 id 중요(유일한 입력값임을 구분)
+input type에 따라서 다양한 입력칸 구현 가능(ex. week, date, range, url etc.)
+
+semantic vs non-semantic
+header main footer 같은 container들은 모두 div로 치환 가능
+but 코딩 해독 어려움
+-> 코딩 시 semantic하게 작성하자, 기능적으로는 같은 tag라 해도 한눈에 알아볼 수 있게끔 의미를 갖는 tag로 작성
+
+
+2. LEARNING CSS
+-html에 css 적용하는 방법은 2가지 있음
+같은 파일에 작성
+분리하여 작성
+
+
+-css에서 속성을 property라고 함
+최종적으로 맨 마지막에 적힌 속성이 적용됨
+
+selector { color: 값;
+font-size: 값px;
+}
+
+*: 속성 전체 적용
+
+#id값(고유값 설정)
+- 지정된 id별로 다른 속성 적용 가능
+
+.class 
+- class 지정한 여러 개의 tag에 같은 속성 동시 적용 가능
+
+inline & external 존재
+
+block
+- block tag 옆에는 다른 tag 올 수 없음
+- display property로써 block->inline or inline->block으로 속성 변경 가능
+
+inline (ex. p, img, span, a etc.)
+- inline은 높이, 너비 존재 X ->margin값 좌우에만 적용
+
+box의 3가지 속성
+margin(바깥 여백)
+- 값 1개: 사방/값 2개: 상하 좌우/값 4개: 상 우 하 좌
+- collapsing margins 일어났을 때 padding으로 해결
+padding(안쪽 공간)
+border
+- block, inline 둘 다 적용
+
+display: flex(layout을 반응형으로 만듦)
+- 부모 elment에 적용
+- justify-contet: main axis(주축)
+- align-items: cross axis(교차축), 적용하기 위해서는 body의 높이 값에 100vh 적용
+- flex-direction 으로 수직, 수평 방향 전환 가능(default: row)
+
+position: fixed, static, relative
+- top, bottom, right, left 값으로 위치 지정
+- absolute는 relative인 부모를 기준으로 상대 위치 지정(없을 시 body 기준)
+
+pseudo selector
+- first child, last child, nth-child(even, odd, n+1): 여러 개 중 지정한 값에 규칙에 따라 특정 속성 부여
+>: 부모 자식 관계
++: 바로 뒤에 따라오는 형제 관계
+~: 붙어 있지 않은 형제 관계
+
+sates
+- active, hover, focus, visited, ::selection, ::placeholder etc
+
+valuable
+ex. --main-color:
+
+
+3. ADVANCED CSS
+transition: 기본값에 적용 O(state X), 기본값 및 state(ex. hover, focus, focus-within 등)에 공통된 property 있어야 함
+transform: box요소에는 적용 X, 특정값의 픽셀 단위 변경
+
+media query
+@media screen and (min-width: ~px) and (max-width: ~px) and (orientation: landscape or portrait) {}
+min or max-device-width {}
+
+
+3. Kokoa Talk Clone
+
+
+3-1. Login Page
+
+language: HTML & Pretter On
+input ! -> html 기본 코드 단축키
+
+script는 항상 마지막에
+
+3개의 값 균등하게 정렬하는 CSS 작성법
+- justify-content값을 space-between이 아니라 center로 주고 전체 class에 width: 33% 적용 이후 세부 조정
+
+#ID ~:[type:~] / ~:not([type:~]){}
+
+
+주석 처리
+html: <!-- ~~ -->
+css: /* ~~ */
+
+input
+- action: 다음 파일로 값 전송
+- method: 데이터 전송 방식 post/get 방식이 있음 post는 백엔드 활용/get은 보안 취약
+
+3-2. Friends List
+
+
+--상단바 고정--
+
+ex. column 3개짜리 status bar 최상단 고정 및 균등 정렬
+
+.status-bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  z-index: 2; ->레이어 설정 기능. 밑에서부터 3번째 레이어라는 뜻. (기본값은 0)
+}
+.status-bar__column {
+  width: 33%;
+}
+.status-bar__column:first-child span {
+  margin-right: 5px;
+}
+.status-bar__column:nth-child(2) {
+  display: flex;
+  justify-content: center;
+}
+.status-bar__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+--개체 순서 역순으로 변경--
+ex. 카톡 말풍선
+
+1. 기존 개체(좌->우)
+.message__info {
+  display: flex;
+  align-items: flex-end;
+}
+
+2-1. 변경 개체(우->좌) * flex 적용된 부모의 child에만 적용!
+.message-row--own .message__bubble {
+  order: 1;
+}
+.message-row--own .message__time {
+  order: 0;
+}
+
+2-2.
+.message-row--own .message__info {
+  flex-direction: row-reverse;
+}
+
+
+<Animation>
+
+--animation 활용하여 카톡 loading 효과 주기--
+1. @keyframes hideSplashScreen {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    visibility: hidden; (html상에서 사라진 것처럼 보이게 하여 클릭 가능. display:none; 하면 안 보이긴 하지만 클릭은 안 됨)
+  }
+}
+
+2. #splash-screen {
+  animation: hideSplashScreen 0.5s ease-in-out forwards; (keyframe의 마지막 값을 그대로 유지)
+  animation-delay: 1s;
+}
+
+
+--메시지 알림에 상하 및 회전 움직임 주기--
+1. @keyframes notificationAnimation {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(-5px) rotateY(360deg);  X: → Y: ↑ Z: 정면
+  }
+  100% {
+    transform: none;
+  }
+}
+
+2. .nav__notification {
+  animation: notificationAnimation 2s ease-in-out infinite;
+}
+
+
+--Nav의 각 아이콘 밑에서 솟아오르는 효과--
+1.@keyframes apppearBtnAnimation {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+2. .nav__btn {
+  transform: translateY(70px);
+  animation: apppearBtnAnimation 1.5s ease-in-out forwards;
+}
+
+
+--마우스 위로 올리면 설정 아이콘 회전--
+
+1.@keyframes rotateCog {
+  from {
+    transform: none;
+  }
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+2. .screen-header__icons .fa-cog:hover {
+  animation: rotateCog 1s linear infinite;
+}
+
+
+--마우스 위로 올리면 하트 아이콘 펌핑--
+@keyframes heartBeat {
+  0% {
+    color: white;
+    transform: none;
+  }
+
+  50% {
+    color: tomato;
+    transform: scale(2);
+  }
+
+  100% {
+    color: white;
+    transform: none;
+  }
+}
+
+.open-post__heart-count:hover i {
+  will-change: transform; (그래픽카드 및 브라우저 활용해 animation 효과 부드럽게)
+  animation: heartBeat 0.5s linear infinite;
+}
+
+
+--채팅방에 fadein 효과--
+
+1. @keyframes messagefadeInRight {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+2. .message-row--own {
+ animation: messagefadeInRight 1s linear;
+}
+
+--transition 활용하여 reply창 늘리기-
+1. .reply{
+  transition: all 0.3s ease-in-out;}
+
+2. .reply input{
+  transition: all 0.3s ease-in-out;}
+
+3. .reply:focus-within input {
+  width: 98vw;
+  transform: translateX(-13%) translateY(-80px);}
+
+4. .reply:focus-within {
+  transform: translateY(80px);}
+
+
+--transition 활용하여 reply창 사라지게 만들기--
+1. .reply .reply__column:first-child,
+.reply .fa-smile-beam,
+.reply button {
+  transition: opacity 0.3s ease-in-out;}
+
+2. .reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-smile-beam,
+.reply:focus-within button {
+  opacity: 0;}
+
+
+
+
+
+
+
+
+

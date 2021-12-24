@@ -1,0 +1,25 @@
+.badge {
+  background-color: tomato;
+  width: 25px;
+  height: 25px;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+}
+
+.warning-mark {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  color: tomato;
+  border: 1px solid tomato;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: 147px;
+  bottom: 0;
+}
